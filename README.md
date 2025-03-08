@@ -1,6 +1,7 @@
 # 🌌 Warp Theme for Oh My Posh 🌌
 
 ![Cosmic Terminal Preview](https://github.com/user-attachments/assets/75cc5eab-cba2-41f2-a75e-91af78ed00e6)
+
 *A terminal theme that brings the cosmos to your command line*
 
 ---
