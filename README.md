@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🌌 Warp Theme for Oh My Posh 🌌
 
 ![Cosmic Terminal Preview](https://images.unsplash.com/photo-1516339901639-2a4b0ba7b5f7?ixid=M3wzNjM5Nzd8MHwxfHNlYXJjaHwxfHxjb3Ntb3MlMjBzdGFyfGVufDB8fHx8MTcxNzI2NjM0NHwwMA&ixlib=rb-4.0.3&w=800)  
@@ -232,7 +231,3 @@ eval "$(oh-my-posh init bash --config warp.omp.json)"
 }
 ```
 </details>
-=======
-# warp-omp
-A space exploration them for Oh My Posh
->>>>>>> origin/main
