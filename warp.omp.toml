@@ -49,7 +49,7 @@ final_space = true
     powerline_symbol = ''
     foreground = 'p:stellar_white'
     background = 'p:nebula_pink'
-    template = '{{ if .SSHSession }} {{ end }} <p:stardust_pink></> {{ .UserName }}<p:stardust_pink>in</>{{ .HostName }}'
+    template = '{{ if .SSHSession }}  {{ end }} <p:stardust_pink></> {{ .UserName }}<p:stardust_pink>in</>{{ .HostName }}'
 
   [[blocks.segments]]
     template = ' 󱓞 <p:stardust_pink></> {{ .Path }} '
