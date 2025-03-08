@@ -47,25 +47,25 @@ brew install oh-my-posh
 
 ### 2. Download Warp Theme  
 ```bash
-curl -o warp.omp.json https://raw.githubusercontent.com/your-username/your-repo/main/warp.omp.json
+curl -o warp.omp.toml https://raw.githubusercontent.com/your-username/your-repo/main/warp.omp.toml
 ```
 
 ### 3. Activate the Theme  
 **PowerShell**  
 ```powershell
-oh-my-posh init pwsh --config warp.omp.json | Invoke-Expression
+oh-my-posh init pwsh --config warp.omp.toml | Invoke-Expression
 ```
 
 **Bash/Zsh**  
 ```bash
-eval "$(oh-my-posh init bash --config warp.omp.json)"
+eval "$(oh-my-posh init bash --config warp.omp.toml)"
 ```
 
 ---
 
 ## 🎨 Customization  
 1. **Modify Colors**:  
-   Edit the `[palette]` section in `warp.omp.json` to adjust:  
+   Edit the `[palette]` section in `warp.omp.toml` to adjust:  
    ```ini
    solar_yellow = '#FFF078' → '#YOUR_COLOR'
    pulsar_magenta = '#E90074' → '#YOUR_COLOR'
@@ -91,7 +91,7 @@ eval "$(oh-my-posh init bash --config warp.omp.json)"
 
 ## 📡 Contact  
 🚀 Created by **The Space Lama Glama**  
-[GitHub Profile](https://github.com/your-username) | [Report Issues](https://github.com/your-username/your-repo/issues)
+[GitHub Profile](https://github.com/amunocis) | [Report Issues](https://github.com/your-username/your-repo/issues)
 
 <details>
 <summary>Theme Code (warp.omp.json)</summary>
