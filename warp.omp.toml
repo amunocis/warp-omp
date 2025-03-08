@@ -1,0 +1,124 @@
+# 🌌 Warp Theme 🌌
+# Terminal theme evoking the beauty of the cosmos and interstellar adventure
+# By The Space Lama Glama 🚀 | MIT License | 2024
+
+name = 'Warp'
+author = 'The Space Lama Glama'
+description = 'A cosmic theme inspired by the mysteries of space, astronomy, and interstellar exploration'
+license = 'MIT'
+theme_version = "1.0.2"
+
+console_title_template = '{{ .Shell }} in {{ .Folder }}'
+version = 3
+final_space = true
+
+[secondary_prompt]
+  template = '󰯉 '
+  foreground = 'magenta'
+  background = 'transparent'
+
+[transient_prompt]
+  template = '󱎃 '
+  background = 'transparent'
+  foreground_templates = [
+    '{{if gt .Code 0}}p:alert_red{{end}}',
+    '{{if eq .Code 0}}p:solar_yellow{{end}}'
+  ]
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    type = 'os'
+    style = 'diamond'
+    leading_diamond = ''
+    trailing_diamond = ''
+    foreground = 'p:cosmic_black'
+    background = 'p:solar_yellow'
+    template = '{{ if .WSL }}WSL at {{ end }}{{ .Icon }} '
+    [blocks.segments.properties]
+     linux = ' '
+     macos = ' '
+     windows = ' '
+
+  [[blocks.segments]]
+    type = 'session'
+    style = 'powerline'
+    powerline_symbol = ''
+    foreground = 'p:stellar_white'
+    background = 'p:nebula_pink'
+    template = '{{ if .SSHSession }} {{ end }} <p:stardust_pink></> {{ .UserName }}<p:stardust_pink>in</>{{ .HostName }}'
+
+  [[blocks.segments]]
+    template = ' 󱓞 <p:stardust_pink></> {{ .Path }} '
+    foreground = 'p:stellar_white'
+    background = 'p:pulsar_magenta'
+    type = 'path'
+    style = 'powerline'
+    powerline_symbol = ''
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+      style = 'folder'
+
+      [blocks.segments.properties.mapped_locations]
+        '~' = ' '
+
+  [[blocks.segments]]
+    template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <p:aurora_cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
+    foreground = 'p:nova_pink'
+    background = 'p:cosmic_black'
+    type = 'git'
+    style = 'powerline'
+    powerline_symbol = ''
+
+    [blocks.segments.properties]
+      branch_icon = ' '
+      cache_duration = 'none'
+      commit_icon = '@'
+      fetch_status = true
+
+[[blocks]]
+  type = 'rprompt'
+  overflow = 'hidden'
+
+  [[blocks.segments]]
+    template = '{{ .FormattedMs }}'
+    foreground = 'p:solar_yellow'
+    background = 'transparent'
+    type = 'executiontime'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+      threshold = 5000
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    template = '  '
+    background = 'transparent'
+    type = 'text'
+    style = 'plain'
+    foreground_templates = ['{{if gt .Code 0}}p:alert_red{{end}}', '{{if eq .Code 0}}p:sky_blue{{end}}']
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+
+[palette]
+  stellar_white = '#FFFFFF'
+  solar_yellow = '#FFF078'
+  pulsar_magenta = '#E90074'
+  nebula_pink = '#FF4191'
+  stardust_pink = '#FF80B0'
+  nova_pink = '#F9F5F6'
+  cosmic_black = '#1A2330'
+  supernova_orange = '#FF8C00'
+  aurora_cyan = '#00FFFF'
+  alert_red = '#B83232'
+  sky_blue = '#CAF0F8'
