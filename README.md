@@ -47,7 +47,7 @@ brew install oh-my-posh
 
 ### 2. Download Warp Theme  
 ```bash
-curl -o warp.omp.toml https://raw.githubusercontent.com/your-username/your-repo/main/warp.omp.toml
+curl -o warp.omp.toml https://raw.githubusercontent.com/amunocis/warp-omp/main/warp.omp.toml
 ```
 
 ### 3. Activate the Theme  
